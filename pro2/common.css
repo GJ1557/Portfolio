@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+* {margin:0;padding:0;box-sizing:border-box;}
+ul, ol, li {list-style:none;}
+a {text-decoration:none;}
+img {width:100%;}
+
+.wrap {height:100vh; display:flex; align-items:center; margin:0 200px; position:relative;}
+
+.num {
+    font-size:400px;
+    position:absolute;
+    color:rgba(0, 0, 0, 0.1);
+    left:28rem;
+}
+.text {
+    width:50%;
+}
+.text h2 {font-size:3rem;}
+.text span {font-size:2rem; margin:2rem 0; display:block;}
+.text h3 {font-size:1.75rem; margin-bottom:1rem;}
+.text h3 p {font-size:1.25rem; line-height:40px;}
+.text a {padding:1rem 3.5rem; background-color:#303030; color:white;font-size:1.25rem; border-radius:1rem; display:block; max-width: 174px; text-align:center;}
+.img {
+    width:50%;
+}
