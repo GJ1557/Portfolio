@@ -4,9 +4,16 @@
 ul, ol, li {list-style:none;}
 img {width:100%;}
 
-body {background-color:rgba(160, 208, 227, 0.5);}
+body {
+  /* background-color:rgba(160, 208, 227, 0.5); */
+  background-color:#111111;
+}
 
-.wrap {height:100vh; display:flex; flex-direction:column; justify-content:center;}
+:root {
+  --rainbow:linear-gradient(233deg, #e56420, #c22525, #3d9c31, #37bbde)
+}
+
+.wrap {height:100vh; display:flex; flex-direction:column; justify-content:center; overflow:hidden; position:relative;}
 
 h2 {margin-bottom:1.5rem;}
 
@@ -31,16 +38,19 @@ h2 {margin-bottom:1.5rem;}
     display:flex;
     text-align:center;
     margin:5rem 0;
+    z-index:100;
 }
 .person {
     text-align:center;
     width:50%;
     transform: skew(0deg, -15deg);
+    transition:.3s;
 }
 .publisher {
     text-align:center;
     width:50%;
     transform: skew(0deg, 15deg);
+    transition:.3s;
 }
 
 .skill {
@@ -60,6 +70,7 @@ h2 {margin-bottom:1.5rem;}
 .line {
     width: 100vw;
     display:flex;
+    z-index:1000;
   }
   .left, .right {
     width: 50vw;
@@ -95,3 +106,140 @@ h2 {margin-bottom:1.5rem;}
     transition: ease-out .6s;
     width:100px;
   }
+  
+  body{
+    margin:0;
+}
+
+/* .person, .publisher,  */
+.person1, .publisher1{
+    background:linear-gradient(233deg, #e56420, #c22525, #3d9c31, #37bbde);
+    /* width:100%; */
+    /* height:5vh; */
+    background-size:cover;
+    background-blend-mode: hard-light;
+    animation: hue-rotate 3s linear infinite;
+    opacity:0.75;
+}
+.person:hover, .publisher:hover {
+  background-color:#FFFFFF;
+}
+
+@keyframes hue-rotate {
+  from {
+    -webkit-filter: hue-rotate(0);
+    -moz-filter: hue-rotate(0);
+    -ms-filter: hue-rotate(0);
+    filter: hue-rotate(0);
+  }
+  to {
+    -webkit-filter: hue-rotate(360deg);
+    -moz-filter: hue-rotate(360deg);
+    -ms-filter: hue-rotate(360deg);
+    filter: hue-rotate(360deg);
+  }
+}
+
+
+.neon1 {
+  width:50px;
+  position:absolute;
+  right:-10%;
+  bottom:0%;
+  animation: neonMove 1.5s infinite alternate linear;
+}
+.neon1in {
+  width:200vw;
+  box-shadow: 0px 5px 40px 40px #30CDE5;
+}
+.neon2 {
+  width:50px;
+  position:absolute;
+  right:-10%;
+  bottom:50%;
+  animation: neonMove 1.9s infinite alternate linear;
+}
+.neon2in {
+  width:200vw;
+  box-shadow: 0px 5px 40px 40px #30CDE5;
+}
+.neon3 {
+  width:50px;
+  position:absolute;
+  right:-10%;
+  bottom:100%;
+  animation: neonMove 2.4s infinite alternate linear;
+}
+.neon3in {
+  width:200vw;
+  box-shadow: 0px 5px 40px 40px #30CDE5;
+}
+.neon4 {
+  width:50px;
+  position:absolute;
+  left:-10%;
+  bottom:0%;
+  animation: neonMove2 1.5s infinite alternate linear;
+}
+.neon4in {
+  width:200vw;
+  box-shadow: 0px 5px 40px 40px #FF5F4D;
+}
+.neon5 {
+  width:50px;
+  position:absolute;
+  left:-10%;
+  bottom:50%;
+  animation: neonMove2 1.9s infinite alternate linear;
+}
+.neon5in {
+  width:200vw;
+  box-shadow: 0px 5px 40px 40px #FF5F4D;
+}
+.neon6 {
+  width:50px;
+  position:absolute;
+  left:-10%;
+  bottom:100%;
+  animation: neonMove2 2.4s infinite alternate linear;
+}
+.neon6in {
+  width:200vw;
+  box-shadow: 0px 5px 40px 40px #FF5F4D;
+}
+.neon7 {
+  width:50px;
+  position:absolute;
+  left:50%;
+  top:-10%;
+  animation: neonMove3 2.5s infinite alternate linear;
+}
+.neon7in {
+  width:200vw;
+  box-shadow: 0px 5px 75px 75px #FFFFFF;
+}
+
+@keyframes neonMove {
+  from {
+    transform:rotate(15deg);
+  }
+  to {
+    transform:rotate(280deg);
+  }
+}
+@keyframes neonMove2 {
+  from {
+    transform:rotate(165deg);
+  }
+  to {
+    transform:rotate(-105deg);
+  }
+}
+@keyframes neonMove3 {
+  from {
+    transform:rotate(195deg);
+  }
+  to {
+    transform:rotate(-15deg);
+  }
+}
