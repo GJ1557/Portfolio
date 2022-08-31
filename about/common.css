@@ -120,9 +120,9 @@ h2 {margin-bottom:1.5rem;}
     background-blend-mode: hard-light;
     animation: hue-rotate 3s linear infinite;
     opacity:0.75;
-}
-.person:hover, .publisher:hover {
-  background-color:#FFFFFF;
+  }
+  .person:hover, .publisher:hover {
+    background-color:#FFFFFF;
 }
 
 @keyframes hue-rotate {
@@ -222,18 +222,34 @@ h2 {margin-bottom:1.5rem;}
 @keyframes neonMove {
   from {
     transform:rotate(15deg);
+    filter:hue-rotate(0)
   }
   to {
     transform:rotate(280deg);
+    filter:hue-rotate(360deg)
   }
+  0% {opacity:0;}
+  20% {opacity:1;}
+  40% {opacity:0;}
+  60% {opacity:1;}
+  80% {opacity:0;}
+  100% {opacity:1;}
 }
 @keyframes neonMove2 {
   from {
     transform:rotate(165deg);
+    filter:hue-rotate(0);
   }
   to {
     transform:rotate(-105deg);
+    filter:hue-rotate(360deg);
   }
+  /* 0% {opacity:0;}
+  20% {opacity:1;}
+  40% {opacity:0;}
+  60% {opacity:1;}
+  80% {opacity:0;}
+  100% {opacity:1;} */
 }
 @keyframes neonMove3 {
   from {
@@ -242,4 +258,14 @@ h2 {margin-bottom:1.5rem;}
   to {
     transform:rotate(-15deg);
   }
+  /* 0% {opacity:0;}
+  10% {opacity:1;}
+  20% {opacity:0;}
+  30% {opacity:1;}
+  40% {opacity:0;}
+  50% {opacity:1;}
+  60% {opacity:0;}
+  70% {opacity:1;}
+  80% {opacity:0;}
+  90% {opacity:1;} */
 }
