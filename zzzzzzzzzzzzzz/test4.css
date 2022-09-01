@@ -15,6 +15,9 @@
     width:300px;
     animation:moonmv 5s infinite alternate linear;
   }
+  .wrap:hover {
+    animation-play-state:paused;
+  }
   img {width:100%;}
   .text {
     font-size: 20vw;

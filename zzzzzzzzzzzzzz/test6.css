@@ -1,0 +1,125 @@
+@charset "utf-8";
+
+* {margin:0; padding:0; box-sizing:border-box;}
+
+.wrap6 {
+    position:relative;
+    overflow:hidden;
+}
+
+
+h1 {
+    z-index:1000;
+    text-align:center;
+    position:absolute;
+    top:20%;
+    left:50%;
+    transform:translateX(-50%);
+    color:white;
+    font-size:3rem;
+    transition:.75s;
+    animation: neon5 1.5s ease-in-out infinite alternate;
+    font-weight:normal;
+}
+/* h1::before {
+    content:'';
+    width:100%;
+    height:20%;
+    background-color:black;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    position:absolute;
+    text-align:center;
+    filter:blur(3rem);
+} */
+.popcorn:hover ~h1 {opacity:0;}
+.curtain {
+    display:flex;
+    justify-content:space-between;
+    height:99.6vh;
+    background-color:black;
+    transition:2s;
+}
+.curtain>div {
+    width:50%;
+    filter:blur(2px);
+    transition:1s;
+}
+.curtain>div:first-of-type {transform:scaleX(-1);}
+.curtain>div>img {width:100%;height:100%;}
+
+.popcorn {
+    width:300px;
+    position:absolute;
+    left:50%;
+    bottom:0;
+    transform:translate(-50%,0);
+    animation: vibration .75s infinite alternate linear;
+    z-index:100
+}
+.popcorn:hover {
+    animation-play-state:paused; 
+    transform:translate(-50%,-3%) rotate(0) !important;
+}
+.popcorn:hover ~.curtain>div {width:0;filter:blur(1rem);}
+.popcorn:hover ~.curtain {background-color:white;}
+.popcorn>img {width:100%;}
+
+@keyframes vibration {
+    from {
+        transform:translate(-50%,-5%) rotate(15deg);
+    }
+    50% {
+        transform:translate(-50%,0%) rotate(0);
+    }
+    to {
+        transform:translate(-50%,-5%) rotate(-15deg);
+    }
+}
+
+.text {
+    position:absolute;
+    left:50%;
+    bottom:40%;
+    font-size:3rem;
+    transform:translateX(-1.5rem);
+}
+.text>p {position:absolute;}
+.popcorn:hover ~.text>p {
+    animation: stylie-keyframes .75s forwards alternate linear;
+}
+
+@keyframes jump {
+    from {
+        transform:translate(0,0);
+    }
+    to {
+        transform:translate(-50%,-50%);
+    }
+}
+
+@keyframes stylie-keyframes {
+  0% {transform:translate(0px, 0px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
+  8.33% {transform:translate(-6px, -64.4722px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
+  16.67% {transform:translate(-24px, -117.2222px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
+  25% {transform:translate(-54px, -158.25px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
+  33.33% {transform:translate(-96px, -187.5556px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
+  41.67% {transform:translate(-150px, -205.1389px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
+  50% {transform:translate(-216px, -211px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
+  58.33% {transform:translate(-277.7222px, -202.6667px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
+  66.67% {transform:translate(-328.2222px, -177.6667px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
+  75% {transform:translate(-367.5px, -136px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
+  83.33% {transform:translate(-395.5556px, -77.6667px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
+  91.67% {transform:translate(-412.3889px, -2.6667px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
+  100% {transform:translate(-418px, 89px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
+}html::after { content: url(https://ga-beacon.appspot.com/UA-42910121-1/stylie?pixel); position: absolute; left: -999em; }
+
+@keyframes neon5 {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF9900, 0 0 70px #FF9900, 0 0 80px #FF9900, 0 0 100px #FF9900, 0 0 150px #FF9900;
+    }
+    to {
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF9900, 0 0 35px #FF9900, 0 0 40px #FF9900, 0 0 50px #FF9900, 0 0 75px #FF9900;
+    }
+  }
