@@ -7,6 +7,10 @@ img {width:100%;}
 
 .wrap {height:100vh; display:flex; align-items:center; margin:0 200px; position:relative;}
 
+nav {position:absolute; left:0; top:4rem; width:100%; display:flex;}
+nav a {color:white; background-color:#303030; padding:1rem 3rem; border-radius:1rem; margin-right:2rem;}
+nav a:last-of-type {margin-right:0; margin-left:calc(100% - 460px);}
+
 .num {
     font-size:400px;
     position:absolute;

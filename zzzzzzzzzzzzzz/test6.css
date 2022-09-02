@@ -20,6 +20,7 @@ h1 {
     transition:.75s;
     animation: neon5 1.5s ease-in-out infinite alternate;
     font-weight:normal;
+    text-align:center;
 }
 /* h1::before {
     content:'';
@@ -46,22 +47,32 @@ h1 {
     filter:blur(2px);
     transition:1s;
 }
-.curtain>div:first-of-type {transform:scaleX(-1);}
+/* .curtain>div:first-of-type {transform:scaleX(-1);} */
 .curtain>div>img {width:100%;height:100%;}
 
 .popcorn {
     width:300px;
+    height:400px;
     position:absolute;
     left:50%;
     bottom:0;
     transform:translate(-50%,0);
     animation: vibration .75s infinite alternate linear;
-    z-index:100
+    z-index:100;
+    background-image:url(../img/carp.png);
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:contain;
+    transition:1s;
 }
 .popcorn:hover {
     animation-play-state:paused; 
     transform:translate(-50%,-3%) rotate(0) !important;
+    background-image:url(../img/dragon.png);
+    width:600px;
+    height:800px;
 }
+.popcorn a {display:block; width:100%; height:100%; cursor:pointer; }
 .popcorn:hover ~.curtain>div {width:0;filter:blur(1rem);}
 .popcorn:hover ~.curtain {background-color:white;}
 .popcorn>img {width:100%;}
@@ -80,40 +91,22 @@ h1 {
 
 .text {
     position:absolute;
+    width:100%;
+    height:100%;
     left:50%;
     bottom:40%;
-    font-size:3rem;
-    transform:translateX(-1.5rem);
 }
-.text>p {position:absolute;}
-.popcorn:hover ~.text>p {
-    animation: stylie-keyframes .75s forwards alternate linear;
-}
-
-@keyframes jump {
-    from {
-        transform:translate(0,0);
-    }
-    to {
-        transform:translate(-50%,-50%);
-    }
-}
-
-@keyframes stylie-keyframes {
-  0% {transform:translate(0px, 0px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
-  8.33% {transform:translate(-6px, -64.4722px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
-  16.67% {transform:translate(-24px, -117.2222px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
-  25% {transform:translate(-54px, -158.25px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
-  33.33% {transform:translate(-96px, -187.5556px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
-  41.67% {transform:translate(-150px, -205.1389px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
-  50% {transform:translate(-216px, -211px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
-  58.33% {transform:translate(-277.7222px, -202.6667px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
-  66.67% {transform:translate(-328.2222px, -177.6667px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
-  75% {transform:translate(-367.5px, -136px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
-  83.33% {transform:translate(-395.5556px, -77.6667px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
-  91.67% {transform:translate(-412.3889px, -2.6667px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
-  100% {transform:translate(-418px, 89px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
-}html::after { content: url(https://ga-beacon.appspot.com/UA-42910121-1/stylie?pixel); position: absolute; left: -999em; }
+.popcorn ~.text>p {position:absolute; transition:.75s; left:0; bottom:-225px; text-align:center; transform:translateX(-50%); font-size:0;}
+.popcorn:hover ~.text>* {font-size:3rem;}
+.popcorn:hover ~.text #text1 {    left:-500px; bottom:-75px;}
+.popcorn:hover ~.text #text2 {    left:-600px;}
+.popcorn:hover ~.text #text3 {    left:-700px; bottom:100px;}
+.popcorn:hover ~.text #text4 {    left:500px; bottom:-75px;}
+.popcorn:hover ~.text #text5 {    left:600px;}
+.popcorn:hover ~.text #text6 {    left:700px; bottom:100px;}
+.popcorn:hover ~.text #text7 {    bottom:500px;}
+.popcorn:hover ~.text #text8 {    left:-500px; bottom:300px;}
+.popcorn:hover ~.text #text9 {    left:500px; bottom:300px;}
 
 @keyframes neon5 {
     from {
