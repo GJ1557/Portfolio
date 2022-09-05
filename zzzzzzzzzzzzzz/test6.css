@@ -36,18 +36,13 @@ h1 {
 
 .popcorn:hover ~h1 {opacity:0;}
 .curtain {
-    display:flex;
-    justify-content:space-between;
-    height:99.6vh;
-    background-color:black;
+    height:100vh;
     transition:2s;
+    background:url(../img/waterfall.jpg); 
+    background-position:center; 
+    background-repeat:no-repeat; 
+    background-size:cover;
 }
-.curtain>div {
-    width:50%;
-    filter:blur(2px);
-    transition:1s;
-}
-/* .curtain>div:first-of-type {transform:scaleX(-1);} */
 .curtain>div>img {width:100%;height:100%;}
 
 .popcorn {
@@ -75,7 +70,9 @@ h1 {
 }
 .popcorn a {display:block; width:100%; height:100%; cursor:pointer; }
 .popcorn:hover ~.curtain>div {width:0;filter:blur(1rem);}
-.popcorn:hover ~.curtain {background:url(../img/waterfall.jpg); background-position:center; background-repeat:no-repeat; background-size:cover;}
+.popcorn:hover ~.curtain {
+    
+}
 .popcorn>img {width:100%;}
 
 @keyframes vibration {
@@ -97,17 +94,13 @@ h1 {
     left:50%;
     bottom:40%;
 }
-.popcorn ~.text>p {position:absolute; transition:.75s; left:0; bottom:-225px; text-align:center; transform:translateX(-50%); font-size:0;}
-.popcorn:hover ~.text>* {font-size:3rem;}
-.popcorn:hover ~.text #text1 {    left:-500px; bottom:-75px;}
-.popcorn:hover ~.text #text2 {    left:-600px;}
-.popcorn:hover ~.text #text3 {    left:-700px; bottom:100px;}
-.popcorn:hover ~.text #text4 {    left:500px; bottom:-75px;}
-.popcorn:hover ~.text #text5 {    left:600px;}
-.popcorn:hover ~.text #text6 {    left:700px; bottom:100px;}
-.popcorn:hover ~.text #text7 {    bottom:500px;}
-.popcorn:hover ~.text #text8 {    left:-500px; bottom:300px;}
-.popcorn:hover ~.text #text9 {    left:500px; bottom:300px;}
+.text>div {position:absolute; transition:.75s; left:0; bottom:-225px; text-align:center; transform:translateX(-50%) !important;}
+.text>* {font-size:3rem; z-index:100;}
+#text1 {    left:-500px; bottom:-75px;}
+#text2 {    left:-600px;}
+#text3 {    bottom:100px;}
+#text4 {    left:500px; bottom:-75px;}
+#text5 {    left:600px;}
 
 @keyframes neon5 {
     from {
@@ -116,4 +109,69 @@ h1 {
     to {
       text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF9900, 0 0 35px #FF9900, 0 0 40px #FF9900, 0 0 50px #FF9900, 0 0 75px #FF9900;
     }
+  }
+
+  .text>div {
+	width: 290px;
+	height: 140px;
+	position: relative;
+	box-shadow: 16px 2px 10px rgba(0, 0, 0, 0.4);
+	perspective: 500px;
+	border-top-left-radius: 300px;
+	border-top-right-radius: 300px;
+	transform-origin: top center;
+	transform: rotateX(3deg);
+	cursor: pointer;
+    position:absolute;
+    z-index:100;    
+}
+.text>div>a {
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 100%;
+	background-size:cover;
+	background-repeat: no-repeat;
+	box-shadow: inset 6px 3px 10px rgba(0, 0, 0, 0.4);
+	border-top-left-radius: inherit;
+	border-top-right-radius: inherit;
+	border: 6px solid #e7e4df;
+	z-index: 0;
+	display: flex;
+	justify-content: center;
+}
+#text1>a {background-image:url(../img/page1.jpg);}
+#text2>a {background-image:url(../img/page2.jpg);}
+#text3>a {background-image:url(../img/page3.jpg);}
+#text4>a {background-image:url(../img/page4.jpg);}
+#text5>a {background-image:url(../img/page5.jpg);}
+
+#cursor {
+    display:none;
+    position: absolute;
+    margin-top: -40px;
+    margin-left: -40px;
+    width: 80px;
+    height: 80px;
+    z-index: 100;
+    
+    text-align: center;
+    
+    border: 2px solid rgba(255,255,255,0.3);
+    border-radius: 50%;
+  }
+#cursor {
+    display:block;
+}
+  #circle {
+    display: block;
+    position: relative;
+    margin: auto;
+    margin-top: 10px;
+    width: 60px;
+    height: 60px;
+    
+    background-image:url(../img/remen.svg);
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px 4px rgba(255,255,255,1);
   }
