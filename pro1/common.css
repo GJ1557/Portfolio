@@ -5,6 +5,8 @@ ul, ol, li {list-style:none;}
 a {text-decoration:none;}
 img {width:100%;}
 
+body {background:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1197275/oceanBackdrop.jpg); color:aliceblue}
+
 .wrap {height:100vh; display:flex; align-items:center; margin:0 200px; position:relative;}
 
 nav {position:absolute; left:0; top:4rem; width:100%; display:flex;}

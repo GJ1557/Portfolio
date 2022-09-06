@@ -1,0 +1,269 @@
+body {
+    background-color:#778899;
+    overflow:hidden;
+}
+
+nav {position:absolute; left:100px; top:50px;}
+nav a {color:red; background-color:white; padding:1rem 2rem; border-radius:2rem;}
+
+h1 {
+    z-index:1000;
+    text-align:center;
+    position:absolute;
+    top:20%;
+    left:50%;
+    transform:translateX(-50%);
+    color:white;
+    font-size:3rem;
+    transition:.75s;
+    animation: neon5 1.5s ease-in-out infinite alternate;
+    font-weight:normal;
+    text-align:center;
+}
+
+.container {
+    height: 0;
+    left:70%;
+    position: absolute;
+    top:4.3%;
+    transform:skew(-20deg, 25deg);
+    width: 0;
+    z-index:10;
+}
+.con2 {
+    /* transform:skew(10deg, -45deg) rotate(65deg); */
+    top:25%;
+    perspective: 900px;
+    transform:rotate(90deg);
+}
+.con3 {
+    top:3.8%;
+    left:117.1%;
+}
+.waterfall {
+    background: #6cbcd4;
+    height: 300px;
+    left:100%;
+    position: absolute;
+    top:0;
+    /* transform: translate(-50%,-50%); */
+    width: 600px;
+}
+.con2 .waterfall {
+    transform:rotateY(-45deg) skewY(-60.5deg) translate(27%,0%);
+    background: #6cbcd4;
+    height: 1600px;
+    left:100%;
+    position: absolute;
+    top:0;
+    /* transform: translate(-50%,-50%); */
+    width: 300px;
+}
+.con3 .waterfall {
+    transform:rotateY(15.5deg) skewY(-60.5deg);
+    background: #6cbcd4;
+    height: 600px;
+    left:100%;
+    position: absolute;
+    top:0;
+    /* transform: translate(-50%,-50%); */
+    width: 300px;
+}
+.rock {
+    position: relative;
+    width: 500px;
+    height: 310px;
+    background: grey;
+}
+.rock.right {
+    transform: translate(40%,-50%);
+}
+.rock.left {
+    transform: translate(-100%,-50%);
+}
+.pool {
+    align-items: baseline;
+    height: 100%;
+    width: 105%;
+    position: relative;
+    display: flex;
+}
+.cascade {
+    background: white;
+    border-radius: 100%;
+    margin-left: -10px;
+    position: relative;
+    display:none;
+}
+.cascade.s {
+    height: 20px;
+    width: 20px;
+    box-shadow: 1px 1px 1px rgba(68,68,68,0.2);
+    z-index: 4;
+}
+.cascade.m {
+    height: 30px;
+    width: 30px;
+    box-shadow: 1px 1px 1px rgba(68,68,68,0.3);
+    z-index: 2;
+}
+.cascade.l {
+    height: 40px;
+    width: 40px;
+    box-shadow: 1px 1px 1px rgba(68,68,68,0.1);
+    z-index: 3;
+}
+.cascade.slow {
+    animation-duration: .4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.cascade.medium {
+    animation-duration: .2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.cascade.fast {
+    animation-duration: .1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.cascade.vertical {
+    animation-name: cascade_vertical;
+}
+.cascade.horizontal {
+    animation-name: cascade_horizontal;
+}
+.cascade.diagonal {
+    animation-name: cascade_diagonal;
+}
+.water {
+    display: flex;
+    height: 100%;
+    overflow-y: hidden;
+    position: absolute;
+    width: 100%;
+}
+.fall {
+    position: relative;
+    border-radius: 5px;
+    animation-name: falling_water;
+    margin-left: 5px;
+}
+.fall.s {
+    height: 30px;
+    width: 5px;
+    box-shadow: 1px 1px 1px rgba(68,68,68,0.2);
+}
+.fall.m {
+    height: 60px;
+    width: 10px;
+    box-shadow: 1px 1px 1px rgba(68,68,68,0.2);
+}
+.fall.l {
+    height: 120px;
+    width: 12px;
+    box-shadow: 1px 1px 1px rgba(68,68,68,0.2);
+}
+.fall.slow {
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+}
+.fall.medium {
+    animation-duration: .8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+}
+.fall.fast {
+    animation-duration: .4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+}
+.fall.delay {
+    animation-delay: .5s;
+}
+.fall.delay-long {
+    animation-delay: 1s;
+}
+.fall.teal {
+    background: #45adbd;
+}
+.fall.light-blue {
+    background: #92d0d8;
+}
+@keyframes cascade_vertical {
+    0% {
+        top: 90%;
+        left: 0%;
+   }
+    33% {
+        top: 90%;
+        left: 1%;
+   }
+    66% {
+        top: 90%;
+        left: 1%;
+   }
+    100% {
+        top: 90%;
+        left: 0%;
+   }
+}
+@keyframes cascade_horizontal {
+    0% {
+        top: 89%;
+        left: 0%;
+   }
+    33% {
+        top: 89%;
+        left: 0%;
+   }
+    66% {
+        top: 90%;
+        left: 0%;
+   }
+    100% {
+        top: 90%;
+        left: 0%;
+   }
+}
+@keyframes cascade_diagonal {
+    0% {
+        top: 89%;
+        left: 0%;
+   }
+    100% {
+        top: 90%;
+        left: 1%;
+   }
+}
+@keyframes falling_water {
+    0% {
+        top: 0%;
+        height: 30px;
+   }
+    100% {
+        top: 90%;
+   }
+}
+
+.wfrock {
+    position:absolute;
+    right:-100px;
+    bottom:0;
+    width:400px;
+    height:100%;
+    background-color:gray;
+    border-radius:51% 49% 79% 21% / 56% 100% 0% 44% ;
+    z-index:11;
+}
+.wfrock2 {
+    position:absolute;
+    right:400px;
+    bottom:0;
+    width:400px;
+    height:100%;
+    background-color:gray;
+    border-radius:51% 49% 79% 21% / 56% 100% 0% 44% ;
+}

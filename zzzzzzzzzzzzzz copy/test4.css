@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: hsl(0, 0%, 20%);
+  }
+  .wrap {
+    position: absolute;
+    width:300px;
+    animation:moonmv 5s infinite alternate linear;
+  }
+  .wrap:hover {
+    animation-play-state:paused;
+  }
+  img {width:100%;}
+  .text {
+    font-size: 20vw;
+    line-height: .8;
+    color: whitesmoke;
+    text-transform: uppercase;
+    font-weight: bold;
+    /* background-color: pink; */
+  }
+  .wrap .text:nth-child(2),
+  .wrap .text:nth-child(3),
+  .crack {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .wrap .text:nth-child(1) {
+    clip-path: polygon(100% 0, 3% 0, 100% 97%);
+    transition: transform .6s;
+  }
+  .wrap .text:nth-child(2) {
+    clip-path: polygon(0 3%, 0% 100%, 97% 100%);
+  }
+  .wrap .text:nth-child(3) {
+    opacity: 1;
+    transition: opacity .1s .6s;
+  }
+  .crack {
+    background-color: hsl(0, 0%, 20%);
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(0 3%, 3% 0, 100% 97%, 97% 100%);
+    transform: translate(-100%, -100%);
+    transition: transform .3s;
+  }
+  .wrap:hover .crack{
+    transform: translate(0, 0);
+  }
+  .wrap:hover .text:nth-child(3) {
+    opacity: 0;
+    transition: opacity .1s .3s;
+  }
+  .wrap:hover .text:nth-child(1) {
+    transition: transform .6s .5s;
+    transform: translate(10%, 10%);
+  }
+
+  @keyframes moonmv {
+    from {
+        left:10%;
+        top:10%;
+    }
+    to {
+        left:80%;
+        top:20%;
+    }
+  }
