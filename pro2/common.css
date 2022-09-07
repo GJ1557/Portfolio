@@ -5,9 +5,27 @@ ul, ol, li {list-style:none;}
 a {text-decoration:none;}
 img {width:100%;}
 
+body {background:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1197275/oceanBackdrop.jpg); color:aliceblue}
+
+@font-face {
+    font-family: '양진체';
+    src: url('https://cdn.jsdelivr.net/gh/supernovice-lab/font@0.9/yangjin.woff') format('woff');
+    font-weight: normal;    font-style: normal;
+}
+@font-face {
+    font-family: 'TmoneyRoundWindExtraBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/TmoneyRoundWindExtraBold.woff') format('woff');
+    font-weight: normal;    font-style: normal;
+}
+@font-face {
+    font-family: 'EF_YOONY';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-01@1.0/EF_YOONY.woff2') format('woff2');
+    font-weight: normal;    font-style: normal;
+}
+
 .wrap {height:100vh; display:flex; align-items:center; margin:0 200px; position:relative;}
 
-nav {position:absolute; left:0; top:4rem; width:100%; display:flex;}
+nav {width:calc(200% - 100px); display:flex; margin-bottom:3rem;}
 nav a {color:white; background-color:#303030; padding:1rem 3rem; border-radius:1rem; margin-right:2rem;}
 nav a:last-of-type {margin-right:0; margin-left:calc(100% - 460px);}
 
@@ -20,11 +38,17 @@ nav a:last-of-type {margin-right:0; margin-left:calc(100% - 460px);}
 .text {
     width:50%;
 }
-.text h2 {font-size:3rem;}
-.text span {font-size:2rem; margin:2rem 0; display:block;}
-.text h3 {font-size:1.75rem; margin-bottom:1rem;}
-.text h3 p {font-size:1.25rem; line-height:40px;}
-.text a {padding:1rem 3.5rem; background-color:#303030; color:white;font-size:1.25rem; border-radius:1rem; display:block; max-width: 174px; text-align:center;}
+.text h2 {font-size:3rem; font-family: '양진체';}
+.text span {font-size:2rem; margin:3rem 0 4rem 0; display:block; font-family: '양진체';}
+.text h3 {font-size:1.5rem; margin-bottom:4rem; font-family: 'TmoneyRoundWindExtraBold';}
+.text h3:last-of-type {margin-bottom:3rem;}
+.text h3 p {font-size:1rem; line-height:40px; font-family: 'EF_YOONY';}
+.text a {padding:1rem 3.5rem; background-color:#303030; color:white;font-size:1rem; border-radius:1rem; display:block; max-width: 174px; text-align:center; font-family: '양진체';}
 .img {
     width:50%;
+    display:flex;
+    justify-content:space-between;
+}
+.img div {
+    width:calc(100% / 3);
 }

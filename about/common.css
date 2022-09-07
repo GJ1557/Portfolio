@@ -23,8 +23,8 @@ h2::after {
   position:absolute;
   width:180%;
   height:0.75rem;
-  background-color:#030303;
-  opacity:0.8;
+  background-color:aqua;
+  opacity:0.3;
   border-radius:1rem;
   top:50%;
   left:50%;
