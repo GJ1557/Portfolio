@@ -149,17 +149,17 @@ h1 {
 #text2>a {background-image:url(./img/2.png);}
 #text3>a {background-image:url(./img/3.png);}
 #text4>a {background-image:url(./img/4.png);}
-#text5>a {background-image:url(./img/5.png);}
+#text5>a {background-image:url(./img/5.svg);}
 
 /* water fall */
 .container {
     height:100%;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-50%) translateZ(0);
     width:calc(100% / 5);
 }
-.con1 {left:0%}
+.con1 {left:0%;}
 .con2 {left:20%}
 .con3 {left:40%}
 .con4 {left:60%}
@@ -171,7 +171,7 @@ h1 {
     left: 50%;
     position: absolute;
     top: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%) translateZ(0);
     width:100%;
 }
 .pool {
@@ -180,12 +180,14 @@ h1 {
     width: 100%;
     position: relative;
     display: flex;
+    transform:translateZ(0);
 }
 .cascade {
     background: white;
     border-radius: 100%;
     margin-left: -30px;
     position: relative;
+    transform:translateZ(0);
 }
 .cascade.s {
     height: 40px;
@@ -235,12 +237,14 @@ h1 {
     overflow-y: hidden;
     position: absolute;
     width:100%;
+    transform:translateZ(0);
 }
 .fall {
     position: relative;
     border-radius: 5px;
     animation-name: falling_water;
     margin-left: 5px;
+    transform:translateZ(0);
 }
 .fall.s {
     height: 30px;
@@ -289,14 +293,14 @@ h1 {
         top: 90%;
         left: 0%;
    }
-    33% {
+    /* 33% {
         top: 90%;
         left: 1%;
    }
     66% {
         top: 90%;
         left: 1%;
-   }
+   } */
     100% {
         top: 90%;
         left: 0%;
@@ -307,14 +311,14 @@ h1 {
         top: 89%;
         left: 0%;
    }
-    33% {
+    /* 33% {
         top: 89%;
         left: 0%;
    }
     66% {
         top: 90%;
         left: 0%;
-   }
+   } */
     100% {
         top: 90%;
         left: 0%;

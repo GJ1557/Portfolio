@@ -23,7 +23,7 @@ h2::after {
   position:absolute;
   width:180%;
   height:0.75rem;
-  background-color:aqua;
+  /* background-color:aqua; */
   opacity:0.3;
   border-radius:1rem;
   top:50%;
@@ -71,6 +71,8 @@ h2::after {
     text-align:center;
     width:40%;
     transform: skew(20deg, -25deg);
+    transform: skew(0deg, -25deg);
+
     transition:.3s;
     line-height:1.6rem;
   }
@@ -117,7 +119,7 @@ h2::after {
   }
   .right {
     color: black;
-    transform: skew(0deg, 25deg);
+    transform: skew(-20deg, 25deg);
   }
   .left .content {
     width: 100vw;

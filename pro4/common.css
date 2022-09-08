@@ -26,8 +26,31 @@ body {background:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1197275/oceanB
 .wrap {height:100vh; display:flex; align-items:center; margin:0 200px; position:relative;}
 
 nav {width:calc(200% - 100px); display:flex; margin-bottom:3rem;}
-nav a {color:white; background-color:#303030; padding:1rem 3rem; border-radius:1rem; margin-right:2rem;}
-nav a:last-of-type {margin-right:0; margin-left:calc(100% - 460px);}
+nav a {color:white; background-color:#303030; padding:1rem 3rem; border-radius:1rem; margin-right:2rem; font-family: '양진체';}
+nav ul {display:flex; justify-content:space-between; align-items:center;}
+nav ul li a {
+    opacity:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:0px;
+    height:0px;
+    font-size:0px;
+    padding:0;
+}
+nav ul li:nth-of-type(1) a {transition:.3s;}
+nav ul li:nth-of-type(2) a {transition:.5s;}
+nav ul li:nth-of-type(3) a {transition:.65s;}
+nav ul li:nth-of-type(4) a {transition:.85s;}
+nav ul li:nth-of-type(5) a {transition:.9s;}
+
+nav:hover ul li a {
+    font-size:12px;
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    opacity:1;
+}
 
 .num {
     font-size:400px;
@@ -43,6 +66,15 @@ nav a:last-of-type {margin-right:0; margin-left:calc(100% - 460px);}
 .text h3 {font-size:1.5rem; margin-bottom:4rem; font-family: 'TmoneyRoundWindExtraBold';}
 .text h3:last-of-type {margin-bottom:3rem;}
 .text h3 p {font-size:1rem; line-height:40px; font-family: 'EF_YOONY';}
-.text a {padding:1rem 3.5rem; background-color:#303030; color:white;font-size:1rem; border-radius:1rem; display:block; max-width: 174px; text-align:center; font-family: '양진체';}
-.img1 {    width:calc(50% / 4 * 3);}
-.img2 {    width:calc(50% / 4);}
+.right {width:50%;}
+.right a {padding:1rem 3rem; margin:2rem auto 0; background-color:#303030; color:white;font-size:1rem; border-radius:1rem; display:block; max-width: 174px; text-align:center; font-family: '양진체';}
+.img {
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    position:relative;
+    margin-top:2rem;
+}
+.img1 {width:100%;}
+.img2 {width:calc(100% / 4); position:absolute; right:0; bottom:0;}
