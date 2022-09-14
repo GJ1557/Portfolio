@@ -13,12 +13,12 @@ nav a {color:red; background-color:white; padding:1rem 2rem; border-radius:2rem;
 
 h1 {
     z-index:1000;
-    text-align:center;
+    max-width:450px;
     position:absolute;
-    top:5%;
+    top:30%;
     left:50%;
     transform:translateX(-50%);
-    color:black;
+    color:#333333;
     font-size:1.5rem;
     line-height:3rem;
     transition:.75s;
@@ -29,6 +29,7 @@ h1 {
 .popcorn.on ~h1 {top:5%;}
 .h1carp {
     opacity:1;
+    width:420px;
     height:43px;
     transition:.25s;
     position:absolute;
@@ -56,10 +57,12 @@ h1 {
     background-size:contain;
     transition:1s;
 }
-.popcorn img {width:100%;}
+/* .popcorn img {width:100%;} */
 
 .popcorn.on {
-    animation-play-state:paused; 
+    animation: brightness 1s forwards alternate ease;
+    /* animation-play-state:paused;  */
+    /* animation-duration:0s; */
     transform:translate(-50%,-3%) rotate(0) !important;
     background-image:url(./img/dragon.png);
     width:500px;
@@ -71,12 +74,29 @@ h1 {
 @keyframes vibration {
     from {
         transform:translate(-50%,-5%) rotate(15deg);
+        bottom:calc(10% + 100px);
+        left:47.5%;
     }
     50% {
         transform:translate(-50%,0%) rotate(0);
+        bottom:10%;
+        left:50%;
     }
     to {
         transform:translate(-50%,-5%) rotate(-15deg);
+        bottom:calc(10% + 100px);
+        left:52.5%;
+    }
+}
+@keyframes brightness {
+    from {
+        filter:brightness(100);
+    }
+    50% {
+        filter:brightness(5);
+    }
+    to {
+        filter:brightness(1);
     }
 }
 
@@ -90,12 +110,12 @@ h1 {
     z-index:90;
 }
 
-.popcorn.on ~.text>* {width:180px; height:180px; opacity:1;}
-.popcorn.on ~.text #text1 {    left:-500px; bottom:-100px;}
-.popcorn.on ~.text #text2 {    left:-600px; bottom:-350px;}
-.popcorn.on ~.text #text3 {    bottom:-450px;}
-.popcorn.on ~.text #text4 {    left:500px; bottom:-100px;}
-.popcorn.on ~.text #text5 {    left:600px; bottom:-350px;}
+.popcorn.on ~.text>* {height:100px; opacity:1;}
+.popcorn.on ~.text #text1 {    left:-500px; bottom:-100px; width:280px;}
+.popcorn.on ~.text #text2 {    left:-600px; bottom:-350px; width:170px;}
+.popcorn.on ~.text #text3 {    bottom:-450px; width:135px;}
+.popcorn.on ~.text #text4 {    left:500px; bottom:-100px; width:270px;}
+.popcorn.on ~.text #text5 {    left:600px; bottom:-350px; width: 165px;}
 
 @keyframes neon5 {
     from {
@@ -149,7 +169,7 @@ h1 {
 #text2>a {background-image:url(./img/2.png);}
 #text3>a {background-image:url(./img/3.png);}
 #text4>a {background-image:url(./img/4.png);}
-#text5>a {background-image:url(./img/5.svg);}
+#text5>a {background-image:url(./img/5.png);}
 
 /* water fall */
 .container {
@@ -159,11 +179,11 @@ h1 {
     transform: translateY(-50%) translateZ(0);
     width:calc(100% / 5);
 }
-.con1 {left:0%;}
-.con2 {left:20%}
-.con3 {left:40%}
-.con4 {left:60%}
-.con5 {left:80%}
+.con0 {left:0%;}
+.con1 {left:20%;}
+.con2 {left:40%;}
+.con3 {left:60%;}
+.con4 {left:80%;}
 .waterfall {
     background: #6cbcd4;
     /* border-radius: 5px; */
@@ -288,19 +308,19 @@ h1 {
 .fall.light-blue {
     background: #92d0d8;
 }
-@keyframes cascade_vertical {
+/* @keyframes cascade_vertical {
     0% {
         top: 90%;
         left: 0%;
    }
-    /* 33% {
+    33% {
         top: 90%;
         left: 1%;
    }
     66% {
         top: 90%;
         left: 1%;
-   } */
+   }
     100% {
         top: 90%;
         left: 0%;
@@ -311,14 +331,14 @@ h1 {
         top: 89%;
         left: 0%;
    }
-    /* 33% {
+    33% {
         top: 89%;
         left: 0%;
    }
     66% {
         top: 90%;
         left: 0%;
-   } */
+   }
     100% {
         top: 90%;
         left: 0%;
@@ -342,4 +362,4 @@ h1 {
     100% {
         top: 90%;
    }
-}
+} */
