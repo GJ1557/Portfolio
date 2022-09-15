@@ -26,7 +26,7 @@ body {background:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1197275/oceanB
 .wrap {height:100vh; display:flex; align-items:center; margin:0 200px; position:relative;}
 
 nav {width:calc(200% - 100px); display:flex; margin-bottom:3rem;}
-nav a {color:white; background-color:#303030; padding:1rem 3rem; border-radius:1rem; margin-right:2rem; font-family: '양진체';}
+nav a {color:#303030; background-color:white; padding:1rem 3rem; border-radius:2rem; margin-right:2rem; font-family: '양진체'; font-weight:bold;}
 nav ul {display:flex; justify-content:space-between; align-items:center;}
 nav ul li a {
     opacity:0;
@@ -62,12 +62,13 @@ nav:hover ul li a {
     width:50%;
 }
 .text h2 {font-size:3rem; font-family: '양진체';}
-.text span {font-size:2rem; margin:3rem 0 4rem 0; display:block; font-family: '양진체';}
+.text h2 span {font-weight:normal; font-family: 'TmoneyRoundWindExtraBold';}
+.text>span {font-size:2rem; margin:3rem 0 4rem 0; display:block; font-family: '양진체';}
 .text h3 {font-size:1.5rem; margin-bottom:4rem; font-family: 'TmoneyRoundWindExtraBold';}
 .text h3:last-of-type {margin-bottom:3rem;}
 .text h3 p {font-size:1rem; line-height:40px; font-family: 'EF_YOONY';}
 .right {width:50%;}
-.right a {padding:1rem 3rem; margin:2rem auto 0; background-color:#303030; color:white;font-size:1rem; border-radius:1rem; display:block; max-width: 174px; text-align:center; font-family: '양진체';}
+.right a {padding:1rem 3rem; margin:2rem auto 0; background-color:white; color:#303030; font-size:1rem; border-radius:2rem; display:block; max-width: 174px; text-align:center; font-family: 'TmoneyRoundWindExtraBold';}
 .img {
     width:100%;
     display:flex;
