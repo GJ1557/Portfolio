@@ -18,16 +18,17 @@ body {background:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1197275/oceanB
     font-weight: normal;    font-style: normal;
 }
 @font-face {
-    font-family: 'EF_YOONY';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-01@1.0/EF_YOONY.woff2') format('woff2');
-    font-weight: normal;    font-style: normal;
+    font-family: 'LeferiPoint-WhiteObliqueA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-WhiteObliqueA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 .wrap {height:100vh; display:flex; align-items:center; margin:0 200px; position:relative;}
 
 nav {width:calc(200% - 100px); display:flex; margin-bottom:3rem;}
 nav a {color:#303030; background-color:white; padding:1rem 3rem; border-radius:2rem; margin-right:2rem; font-family: '양진체'; font-weight:bold;}
-nav ul {display:flex; justify-content:space-between; align-items:center;}
+nav ul {display:flex; justify-content:space-between; align-items:center; z-index:10000;}
 nav ul li a {
     opacity:0;
     display:flex;
@@ -65,10 +66,10 @@ nav:hover ul li a {
 .text h2 span {font-weight:normal; font-family: 'TmoneyRoundWindExtraBold';}
 .text>span {font-size:2rem; margin:3rem 0 4rem 0; display:block; font-family: '양진체';}
 .text h3 {font-size:1.5rem; margin-bottom:4rem; font-family: 'TmoneyRoundWindExtraBold';}
-.text h3:last-of-type {margin-bottom:3rem;}
-.text h3 p {font-size:1rem; line-height:40px; font-family: 'EF_YOONY';}
+.text h3:last-of-type {margin-bottom:0;}
+.text h3 p {font-size:1rem; line-height:40px; font-family: 'LeferiPoint-WhiteObliqueA';}
 .right {width:50%;}
-.right a {padding:1rem 3rem; margin:2rem auto 0; background-color:white; color:#303030; font-size:1rem; border-radius:2rem; display:block; max-width: 174px; text-align:center; font-family: 'TmoneyRoundWindExtraBold';}
+.right a {padding:1rem 3rem; margin:2rem auto 0; background-color:white; color:#303030; font-size:1rem; border-radius:2rem; display:block; max-width: 200px; text-align:center; font-family: 'TmoneyRoundWindExtraBold';}
 .img {
     width:100%;
     display:flex;
@@ -78,3 +79,4 @@ nav:hover ul li a {
 .img div {
     width:calc(100% / 3);
 }
+.link {display:flex;}

@@ -118,10 +118,10 @@ nav a {color:red; background-color:white; padding:1rem 2rem; border-radius:2rem;
 @keyframes hue {
   from {color:snow;
   }
-  20% {
+  10% {
     color:black;
   }
-  80% {
+  90% {
     color:black;
   }
   to {

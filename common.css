@@ -18,10 +18,17 @@
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-01@1.0/EF_YOONY.woff2') format('woff2');
     font-weight: normal;    font-style: normal;
 }
+@font-face {
+    font-family: 'LeferiPoint-WhiteObliqueA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-WhiteObliqueA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
 
 h1 {
     z-index:1000;
-    max-width:450px;
+    max-width:500px;
+    width:100%;
     position:absolute;
     top:25%;
     left:50%;
@@ -33,17 +40,18 @@ h1 {
     /* animation: neon5 1.5s ease-in-out infinite alternate; */
     font-weight:normal;
     text-align:center;
-    font-family: 'EF_YOONY';
+    font-family: 'LeferiPoint-WhiteObliqueA';
     font-weight:bold;
 }
 h1 strong {
     animation: neon5 1.5s ease-in-out infinite alternate;
-    font-family: 'TmoneyRoundWindExtraBold';
+    font-family: 'EF_YOONY';
 }
 .popcorn.on ~h1 {top:5%;}
 .h1carp {
+    text-align:center;
     opacity:1;
-    width:420px;
+    width:490px;
     height:43px;
     transition:.25s;
     position:absolute;
@@ -86,12 +94,12 @@ h1 strong {
 .popcorn>img {width:100%;}
 .popcorn p{
     position:absolute; top:0; right:0;
-    font-size:2rem;
+    font-size:0;
     transform:translate(30%,100%);
-    display:none;
-    font-family: 'EF_YOONY';
+    transition:1s;
+    font-family: 'TmoneyRoundWindExtraBold';
 }
-.popcorn:hover p {display:block;}
+.popcorn.on p {display:block; font-size:2rem;}
 
 @keyframes vibration {
     from {
@@ -135,7 +143,7 @@ h1 strong {
 .popcorn.on ~.text>* {height:100px; opacity:1;}
 .popcorn.on ~.text #text1 {    left:-500px; bottom:-100px; width:280px;}
 .popcorn.on ~.text #text2 {    left:-600px; bottom:-350px; width:170px;}
-.popcorn.on ~.text #text3 {    bottom:-450px; width:135px;}
+.popcorn.on ~.text #text3 {    bottom:-500px; width:135px;}
 .popcorn.on ~.text #text4 {    left:600px; bottom:-350px; width:270px;}
 .popcorn.on ~.text #text5 {    left:500px; bottom:-100px; width:165px;}
 

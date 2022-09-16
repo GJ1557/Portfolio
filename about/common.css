@@ -12,14 +12,30 @@ body {background:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1197275/oceanB
   src: url('https://cdn.jsdelivr.net/gh/supernovice-lab/font@0.9/yangjin.woff') format('woff');
   font-weight: normal;    font-style: normal;
 }
+@font-face {
+  font-family: 'TmoneyRoundWindExtraBold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/TmoneyRoundWindExtraBold.woff') format('woff');
+  font-weight: normal;    font-style: normal;
+}
+@font-face {
+  font-family: 'EF_YOONY';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-01@1.0/EF_YOONY.woff2') format('woff2');
+  font-weight: normal;    font-style: normal;
+}
+@font-face {
+  font-family: 'LeferiPoint-WhiteObliqueA';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-WhiteObliqueA.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
 :root {
   --rainbow:linear-gradient(233deg, #e56420, #c22525, #3d9c31, #37bbde)
 }
 
-.wrap {height:100vh; display:flex; flex-direction:column; justify-content:center; overflow:hidden; position:relative;}
+.wrap {height:100vh; display:flex; flex-direction:column; justify-content:center; overflow:hidden; position:relative; align-items:center;}
 
-nav {position:absolute; left:200px; top:5rem; display:flex; z-index:10000;}
+nav {position:absolute; left:200px; top:6rem; display:flex; z-index:10000;}
 nav a,nav span {color:#303030; background-color:white; padding:1rem 3rem; border-radius:2rem; margin-right:2rem; font-family: '양진체'; font-weight:bold;}
 nav ul {display:flex; justify-content:space-between; align-items:center;}
 nav ul li a {
@@ -47,20 +63,7 @@ nav:hover ul li a {
 }
 
 h2 {margin-bottom:1.5rem; position:relative; color:white}
-h2::after {
-  z-index:-1;
-  content:'';
-  position:absolute;
-  width:180%;
-  height:0.75rem;
-  /* background-color:aqua; */
-  opacity:0.3;
-  border-radius:1rem;
-  top:50%;
-  left:50%;
-  transform:translate(-50%, -50%);
-}
-
+.iam h2 {font-family: 'TmoneyRoundWindExtraBold';}
 .iam {
     display:flex;
     justify-content:center;
@@ -68,6 +71,8 @@ h2::after {
     margin:5rem 0;
     z-index:100;
     position:relative;
+    width:100%;
+    font-family: 'LeferiPoint-WhiteObliqueA';
 }
 .iam::before {
   content:'';
@@ -101,6 +106,9 @@ h2::after {
     width: 100vw;
     display:flex;
     z-index:1000;
+    align-items:center;
+    height:20vh;
+    margin-top:10rem;
   }
   .left, .right {
     width: 50vw;
@@ -138,4 +146,17 @@ h2::after {
   
   body{
     margin:0;
-}
+  }
+
+  .qrcode {
+    transform:translateY(-30%);
+    width:150px;
+    height:150px;
+    margin:0 auto;
+  }
+  .qrcode h2 {
+    font-size:1rem;
+    text-align:center;
+    font-family: 'EF_YOONY';
+    font-weight:normal;
+  }
