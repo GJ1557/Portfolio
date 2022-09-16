@@ -64,6 +64,15 @@ nav:hover ul li a {
 
 h2 {margin-bottom:1.5rem; position:relative; color:white}
 .iam h2 {font-family: 'TmoneyRoundWindExtraBold';}
+.iam h2 span {text-shadow: 0 0 15px red, 0 0 25px yellow; animation: glow 1.5s linear infinite; }
+    @keyframes glow {
+  0% {
+  filter: hue-rotate(0deg);
+  }
+  100% {
+  filter: hue-rotate(360deg);
+  }
+}
 .iam {
     display:flex;
     justify-content:center;
