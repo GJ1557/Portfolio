@@ -37,15 +37,26 @@ h1 {
     font-size:1.5rem;
     line-height:3.5rem;
     transition:.75s;
-    /* animation: neon5 1.5s ease-in-out infinite alternate; */
     font-weight:normal;
     text-align:center;
     font-family: 'LeferiPoint-WhiteObliqueA';
     font-weight:bold;
 }
 h1 strong {
-    animation: neon5 1.5s ease-in-out infinite alternate;
+    /* animation: neon5 1.5s linear infinite alternate; */
+    text-shadow: 0 0 15px red, 0 0 25px yellow;
     font-family: 'EF_YOONY';
+    animation: glow 1.5s linear infinite;
+    background-color:rgba(255, 255, 255, 0.1);
+    border-radius:2rem;
+}
+@keyframes glow {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
 }
 .popcorn.on ~h1 {top:5%;}
 .h1carp {
@@ -141,7 +152,7 @@ h1 strong {
 }
 
 .popcorn.on ~.text>* {height:100px; opacity:1;}
-.popcorn.on ~.text #text1 {    left:-500px; bottom:-100px; width:280px;}
+.popcorn.on ~.text #text1 {    left:-500px; bottom:-100px; width:250px;}
 .popcorn.on ~.text #text2 {    left:-600px; bottom:-350px; width:170px;}
 .popcorn.on ~.text #text3 {    bottom:-500px; width:135px;}
 .popcorn.on ~.text #text4 {    left:600px; bottom:-350px; width:270px;}
